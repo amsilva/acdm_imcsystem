@@ -1,6 +1,8 @@
 class Aluno {
 
   private String nome;
+  private Avaliacao avaliacao;
+
 
   //construtor
   public Aluno(String n) {
@@ -8,8 +10,18 @@ class Aluno {
   }
   
   public String getNome() {
-    return nome;
+    return this.nome;
   }
+
+  public Avaliacao getAvaliacao() {
+    return this.avaliacao;
+  }
+
+  public void adicionaAvaliacao(Avaliacao av) {
+    this.avaliacao = av;
+  }
+
+
 
 
 }
