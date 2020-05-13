@@ -9,10 +9,10 @@ class Avaliacao {
   }
 
   public float indice() {
-    retunr this.peso / (this.altura * this.altura);
+    return this.peso / (this.altura * this.altura);
   }
-
-  public String clasificacao(){
+                
+  public String classificacao(){
     if (this.indice() < 18) 
       return "MAGRO";
     else if (this.indice() > 30) 

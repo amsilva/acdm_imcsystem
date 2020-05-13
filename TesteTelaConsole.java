@@ -1,22 +1,32 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 class TesteTelaConsole {
 
-   public void executar () {
+  Scanner teclado = new Scanner(System.in);
+  ArrayList<Aluno> grupo = new ArrayList<Aluno>();
+  
+  public void executar () {
 
-    ArrayList<Aluno> academia = new ArrayList<Aluno>();
-    Scanner teclado = new Scanner(System.in);
+    ArrayList<Aluno> grupo = new ArrayList<Aluno>();
+    int op;
+    boolean continua = true;
 
-
-     while(true) {
+    while(continua) {
 
       System.out.println("** Menu de opçoes 1");
+      System.out.println("-------------------");
       System.out.println("[1] novo aluno ");
       System.out.println("[2] nova avalicao ");
       System.out.println("[11] lista todos alunos ");
-      System.out.println("Digite a opção:_");
+      System.out.println("[12] lista historico de alunos ");
+      System.out.println("[0] sair ");
+      System.out.println("-------------------");
+      System.out.print("Digite a opção:_");
 
+      op = teclado.nextInt();
 
+      if (op == 0) continua = false;
 
       if (op == 1) this.incluiAluno();
 
@@ -24,16 +34,7 @@ class TesteTelaConsole {
 
 
 
-     }
-
-
-
-
-
-
-
-
-
+    }
 
 
 
@@ -42,18 +43,18 @@ class TesteTelaConsole {
    
 
    private void incluiAluno() {
-      System.out.println("** Cadastrando novo aluno");
-      System.out.println("Digite o nome do aluno_");
-      String nome = teclado.nextLine();
+      System.out.println("\n** Cadastrando novo aluno");
+      System.out.print("Digite o nome do aluno_");
+      String nome = teclado.next();
       Aluno newAluno = new Aluno(nome);
-      academia.add(newAluno);
+      grupo.add(newAluno);
    }
 
   private void listaTodosAlunos() {
-    Systemout.println("Total de alunos: " + academia.lenght());
-    Systemout.println("---------------------------");
-    for (Aluno a : academia) {
-      Systemout.println(a.getNome());
+    System.out.println("Total de alunos: " + grupo.size());
+    System.out.println("---------------------------");
+    for (Aluno a : grupo) {
+      System.out.println(a.getNome());
     }
 
 

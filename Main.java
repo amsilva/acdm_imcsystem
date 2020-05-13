@@ -3,8 +3,8 @@ class Main {
     
     
     //Teste teste = new Teste();
-    //TesteTelaConsole teste = new TesteTelaConsole();
-    //teste.executar();
+    TesteTelaConsole teste = new TesteTelaConsole();
+    teste.executar();
 
 
 
