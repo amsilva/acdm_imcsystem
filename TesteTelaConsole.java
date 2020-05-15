@@ -14,13 +14,13 @@ class TesteTelaConsole {
 
     while(continua) {
 
-      System.out.println("** Menu de opçoes 1");
+      System.out.println("\n** Menu de opçoes 1");
       System.out.println("-------------------");
-      System.out.println("[1] novo aluno ");
-      System.out.println("[2] nova avalicao ");
-      System.out.println("[11] lista todos alunos ");
-      System.out.println("[12] lista historico de alunos ");
-      System.out.println("[0] sair ");
+      System.out.println("[ 1] NOVO ALUNO");
+      System.out.println("[ 2] NOVA AVALIACAO ");
+      System.out.println("[11] TODOS ALUNOS ");
+      System.out.println("[] HISTORICO ALUNO ");
+      System.out.println("[ 0] sair ");
       System.out.println("-------------------");
       System.out.print("Digite a opção:_");
 
@@ -30,7 +30,10 @@ class TesteTelaConsole {
 
       if (op == 1) this.incluiAluno();
 
+      if (op == 2) this.incluiAvaliacao();
+
       if (op == 11) this.listaTodosAlunos();
+
 
 
 
@@ -43,18 +46,37 @@ class TesteTelaConsole {
    
 
    private void incluiAluno() {
-      System.out.println("\n** Cadastrando novo aluno");
+      //System.out.println("\n** Cadastrando novo aluno");
       System.out.print("Digite o nome do aluno_");
-      String nome = teclado.next();
+      teclado.nextLine();
+      String nome = teclado.nextLine();
       Aluno newAluno = new Aluno(nome);
       grupo.add(newAluno);
+   }
+
+   private void incluiAvaliacao() {
+      //System.out.println("\n** Cadastrando nova avaliacao");
+      this.listaTodosAlunos();
+      System.out.print("indique o aluno_");
+      int i = teclado.nextInt();
+
+
+
+
+      System.out.print("peso_");
+      float p = teclado.nextFloat();
+      System.out.print("peso_");
+      float a = teclado.nextFloat();
+      Avaliacao newAvaliacao = new Avaliacao(p,a);
+      //grupo.add(newAluno);
    }
 
   private void listaTodosAlunos() {
     System.out.println("Total de alunos: " + grupo.size());
     System.out.println("---------------------------");
+    int i = 1;
     for (Aluno a : grupo) {
-      System.out.println(a.getNome());
+      System.out.println(i++ + ") " + a.getNome());
     }
 
 

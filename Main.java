@@ -2,8 +2,8 @@ class Main {
   public static void main(String[] args) {
     
     
-    Teste teste = new Teste();
-    //TesteTelaConsole teste = new TesteTelaConsole();
+    //Teste teste = new Teste();
+    TesteTelaConsole teste = new TesteTelaConsole();
     teste.executar();
 
 
