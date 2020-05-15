@@ -4,7 +4,7 @@ import java.util.Scanner;
 class TesteTelaConsole {
 
   Scanner teclado = new Scanner(System.in);
-  ArrayList<Aluno> grupo = new ArrayList<Aluno>();
+  ArrayList<Aluno> time = new ArrayList<Aluno>();
   
   public void executar () {
 
@@ -51,7 +51,7 @@ class TesteTelaConsole {
       teclado.nextLine();
       String nome = teclado.nextLine();
       Aluno newAluno = new Aluno(nome);
-      grupo.add(newAluno);
+      time.add(newAluno);
    }
 
    private void incluiAvaliacao() {
@@ -60,22 +60,21 @@ class TesteTelaConsole {
       System.out.print("indique o aluno_");
       int i = teclado.nextInt();
 
-
-
-
       System.out.print("peso_");
       float p = teclado.nextFloat();
       System.out.print("peso_");
       float a = teclado.nextFloat();
+
       Avaliacao newAvaliacao = new Avaliacao(p,a);
-      //grupo.add(newAluno);
+
+      grupo.add(time.get(i-1).adicionaAvaliacao(newAvaliacao));
    }
 
   private void listaTodosAlunos() {
-    System.out.println("Total de alunos: " + grupo.size());
+    System.out.println("Total de alunos: " + time.size());
     System.out.println("---------------------------");
     int i = 1;
-    for (Aluno a : grupo) {
+    for (Aluno a : time) {
       System.out.println(i++ + ") " + a.getNome());
     }
 
