@@ -61,7 +61,7 @@ class TesteTelaConsole {
 
       System.out.print("peso_");
       float p = teclado.nextFloat();
-      System.out.print("peso_");
+      System.out.print("altura_");
       float a = teclado.nextFloat();
 
       Avaliacao newAvaliacao = new Avaliacao(p,a);
