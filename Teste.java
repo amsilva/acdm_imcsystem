@@ -18,8 +18,8 @@ class Teste {
   private void mostraAluno(Aluno a) {
 
     System.out.println(a.getNome());
-    System.out.println("Indice = " + a.getAvaliacao().indice());
-    System.out.println("Situacao = " + a.getAvaliacao().classificacao());
+    //System.out.println("Indice = " + a.getAvaliacao().indice());
+    //System.out.println("Situacao = " + a.getAvaliacao().classificacao());
 
   }
 

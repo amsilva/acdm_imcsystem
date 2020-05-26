@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+
 class Aluno {
 
   private String nome;
-  private Avaliacao avaliacao;
-
+  //private Avaliacao avaliacao;
+  private ArrayList<Avaliacao> avaliacoes;
 
   //construtor
   public Aluno(String n) {
@@ -13,12 +15,12 @@ class Aluno {
     return this.nome;
   }
 
-  public Avaliacao getAvaliacao() {
-    return this.avaliacao;
+  public ArrayList<Avaliacao> getAvaliacoes() {
+    return this.avaliacoes;
   }
 
   public void adicionaAvaliacao(Avaliacao av) {
-    this.avaliacao = av;
+    this.avaliacoes.add(av);
   }
 
 
