@@ -8,7 +8,6 @@ class TesteTelaConsole {
   
   public void executar () {
 
-    ArrayList<Aluno> grupo = new ArrayList<Aluno>();
     int op;
     boolean continua = true;
 
@@ -67,7 +66,8 @@ class TesteTelaConsole {
 
       Avaliacao newAvaliacao = new Avaliacao(p,a);
 
-      grupo.add(time.get(i-1).adicionaAvaliacao(newAvaliacao));
+      //grupo.add(time.get(i-1).adicionaAvaliacao(newAvaliacao));
+      time.get(i-1).adicionaAvaliacao(newAvaliacao);
    }
 
   private void listaTodosAlunos() {
