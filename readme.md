@@ -1,7 +1,7 @@
 #### @imccontrol
 
 ##### 1. apresentação
-O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal. Desenvolvido pelo polímata Lambert Quételet no fim do século XIX, trata-se de um método fácil e rápido para a avaliação do nível de gordura de cada pessoa, sendo, por isso, um preditor internacional de obesidade adotado pela Organização Mundial da Saúde (OMS).O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em quilogramas e a altura em metros. [wikipedia](https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal)
+O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal. Desenvolvido pelo polímata Lambert Quételet no fim do século XIX, trata-se de um método fácil e rápido para a avaliação do nível de gordura de cada pessoa, sendo, por isso, um preditor internacional de obesidade adotado pela Organização Mundial da Saúde (OMS). Ele é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em quilogramas e a altura em metros. [wikipedia](https://pt.wikipedia.org/wiki/%C3%8Dndice_de_massa_corporal)
 
 ##### 2. projeto
 
@@ -13,11 +13,11 @@ O índice de massa corporal (IMC) é uma medida internacional usada para calcula
 
 > |imc|classificacao|
 > |---|-------------|
-> |até 18|- magro|
-> |acima de 30|- sobrepeso|
-> |de 18 a 30|- regular|
+> |até 18|magro|
+> |acima de 30|sobrepeso|
+> |de 18 a 30|regular|
 
-###### diagrama de classe (UML) das entidades básicas de negócio
+###### Diagrama de classe (UML) das entidades básicas de negócio
 
 ![alt text](https://www.linkpicture.com/q/arroba_imccontrol_diagramaclasse_entidades.png)
 
@@ -30,4 +30,4 @@ O índice de massa corporal (IMC) é uma medida internacional usada para calcula
 - [x]  (implementation) associacao 1/* e encapsulamento do relacionamento para manipulacao das avaliacoes
 - [ ]  (test) teste interativo por console
 - [ ]  (refactoring) responsabilidade controlador _<<controler>>_
-- [ ]  (test) persistencia de dados
+- [ ]  (test) persistência de dados
